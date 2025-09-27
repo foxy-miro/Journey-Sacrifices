@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #000000, #1a0000, #000000);
+    color: #f0f0f0;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+}
+#game {
+    max-width: 600px;
+    text-align: center;
+}
+#story {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    animation: flicker 3s infinite;
+}
+button {
+    background: #330000;
+    border: 2px solid #660000;
+    color: #f0f0f0;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+button:hover {
+    background: #660000;
+}
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        opacity: 0.5;
+    }
+}
